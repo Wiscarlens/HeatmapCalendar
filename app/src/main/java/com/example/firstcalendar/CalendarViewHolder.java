@@ -6,20 +6,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CalendarViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
     public final TextView dayOfMonth;
-    LinearLayout parentLayout;
+    protected LinearLayout calendarCellLL;
     private final CalendarAdapter.OnItemListener onItemListener;
     public CalendarViewHolder(@NonNull View itemView, CalendarAdapter.OnItemListener onItemListener)
     {
         super(itemView);
 
-        parentLayout = itemView.findViewById(R.id.calendarCellLayout);
+        calendarCellLL = itemView.findViewById(R.id.calendarCellLayout);
         dayOfMonth = itemView.findViewById(R.id.cellDayText);
 
         this.onItemListener = onItemListener;

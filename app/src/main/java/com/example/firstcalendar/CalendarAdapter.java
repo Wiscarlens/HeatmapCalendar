@@ -1,8 +1,6 @@
 package com.example.firstcalendar;
 
 
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,26 +41,26 @@ class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder>
     public void onBindViewHolder(@NonNull CalendarViewHolder holder, int position)
     {
 
-        int gray = ContextCompat.getColor(holder.parentLayout.getContext(), R.color.gray);
-        int lightGreen = ContextCompat.getColor(holder.parentLayout.getContext(), R.color.light_green);
-        int green = ContextCompat.getColor(holder.parentLayout.getContext(), R.color.green);
-        int mediumDarkGreen = ContextCompat.getColor(holder.parentLayout.getContext(), R.color.medium_dark_green);
-        int darkGreen = ContextCompat.getColor(holder.parentLayout.getContext(), R.color.dark_green);
+        int gray = ContextCompat.getColor(holder.calendarCellLL.getContext(), R.color.gray);
+        int lightGreen = ContextCompat.getColor(holder.calendarCellLL.getContext(), R.color.light_green);
+        int green = ContextCompat.getColor(holder.calendarCellLL.getContext(), R.color.green);
+        int mediumDarkGreen = ContextCompat.getColor(holder.calendarCellLL.getContext(), R.color.medium_dark_green);
+        int darkGreen = ContextCompat.getColor(holder.calendarCellLL.getContext(), R.color.dark_green);
 
         for (int i = 0; i < greenDays.size(); i++)
         {
             if (daysOfMonth.get(position).getDay() == greenDays.get(i).getDay() && daysOfMonth.get(position).getMonth() == greenDays.get(i).getMonth())
             {
                 if (greenDays.get(i).getFrequency() == 1) {
-                    holder.parentLayout.setBackgroundColor(lightGreen);
+                    holder.calendarCellLL.setBackgroundColor(lightGreen);
                 } else if (greenDays.get(i).getFrequency() == 2) {
-                    holder.parentLayout.setBackgroundColor(green);
+                    holder.calendarCellLL.setBackgroundColor(green);
                 } else if (greenDays.get(i).getFrequency() == 3) {
-                    holder.parentLayout.setBackgroundColor(mediumDarkGreen);
+                    holder.calendarCellLL.setBackgroundColor(mediumDarkGreen);
                 }  else if (greenDays.get(i).getFrequency() > 3) {
-                    holder.parentLayout.setBackgroundColor(darkGreen);
+                    holder.calendarCellLL.setBackgroundColor(darkGreen);
                 } else if (greenDays.get(i).getFrequency() < 0) {
-                    holder.parentLayout.setBackgroundColor(gray);
+                    holder.calendarCellLL.setBackgroundColor(gray);
                 }
 //                holder.parentLayout.setBackgroundColor(Color.GREEN);
             }
