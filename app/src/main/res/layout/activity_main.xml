@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/back"
+            android:textColor="@color/blue"
+            android:background="@null"
+            android:textStyle="bold"
+            android:onClick="previousMonthAction"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/monthYearTV"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Feb 2021"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/forward"
+            android:textColor="@color/blue"
+            android:background="@null"
+            android:textStyle="bold"
+            android:onClick="nextMonthAction"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <Button
+                android:id="@+id/quarter1"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:text="Q1"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:background="@drawable/button_press_background"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/quarter2"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:text="Q2"
+                android:textColor="@color/dark_green"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:background="@drawable/button_background"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/quarter3"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:text="Q3"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:background="@drawable/button_press_background"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/quarter4"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:text="Q4"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:background="@drawable/button_press_background"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            tools:itemCount="7"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
